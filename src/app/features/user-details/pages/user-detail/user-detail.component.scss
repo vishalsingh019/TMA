@@ -1,0 +1,28 @@
+
+.detail-wrapper{
+    background-color: #f1f1f1;
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 24px;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    svg{
+        width: 300px;
+    }
+  }
+

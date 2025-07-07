@@ -1,0 +1,44 @@
+
+
+.table-wrapper{
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+}
+
+.row {
+    display: table-row;
+  }
+
+  .cell {
+    display: table-cell;
+    border: 1px solid #ccc;
+    padding: 12px;
+  }
+
+  .header {
+    font-weight: bold;
+    background-color: #f1f1f1;
+  }
+
+.row-hover{
+    cursor: pointer;
+}
+
+.row-hover:hover{
+    background-color: #d0eaf7;
+}
+
+
+.cell-label {
+  cursor: text;
+  user-select: none;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 4px;
+  box-sizing: border-box;
+}

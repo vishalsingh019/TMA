@@ -1,0 +1,29 @@
+
+<div class="table-wrapper">
+    <div class="row header">
+    <div *ngFor="let header of tableKeys" class="cell header">{{header}}</div>
+   </div>
+
+    <div *ngFor="let items of jsonData; let rowIndex = index" class="row row-hover" >
+        <div *ngFor="let headkey of jsonDatakeys" class="cell" class="cell"
+    (click)="navigateToDetails(items)">
+            <label
+            *ngIf="!isEditing(rowIndex, headkey)"
+            (click)="enterEditMode($event, rowIndex, headkey)"
+            class="cell-label"
+        >
+            {{ items[headkey] }}
+        </label>
+
+        <input
+        *ngIf="isEditing(rowIndex, headkey)"
+        [value]="items[headkey]"
+        (click)="stopClick($event)"
+        (blur)="saveEdit($event, rowIndex, headkey)"
+        (keydown.enter)="saveEdit($event, rowIndex, headkey)"
+        autofocus
+      />
+          </div>
+    </div>
+ 
+</div>
